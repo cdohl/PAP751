@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+   <!-- Google font -->
+   <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic" rel="stylesheet" type="text/css">
+    <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({tex2jax: {inlineMath: [['\$','\$'], ['\\(','\\)']]}});
+    </script>
+    <title>
+     PyCFD: a Pythonic introduction to computational fluid dynamics
+    </title>
+    <link href="./css/notebook.css" rel="stylesheet">
+     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+     </link>
+    </link>
+   </link>
+  </meta>
+ </head>
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+   <div class="navbar-header">
+    <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+     <span class="sr-only">
+      Toggle navigation
+     </span>
+     <span class="icon-bar">
+     </span>
+     <span class="icon-bar">
+     </span>
+     <span class="icon-bar">
+     </span>
+    </button>
+    <a class="navbar-brand" href="index.html">
+     PyCFD
+    </a>
+   </div>
+   <div class="collapse navbar-collapse" id="navbar">
+    <ul class="nav navbar-nav">
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+     <li>
+      <a href="http://nbviewer.ipython.org/github/cdohl/PAP751/blob/master/Installing%20Python%20and%20iPython%20notebook.ipynb ">
+       Download notebook
+      </a>
+     </li>
+    </ul>
+   </div>
+   <!--/.nav-collapse -->
+  </div>
+ </nav>
+ <div id="notebook">
+  <div id="notebook-container">
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h1 id="Installing-Python-and-Jupyter-(iPython)-notebook">
+       Installing Python and Jupyter (iPython) notebook
+       <a class="anchor-link" href="#Installing-Python-and-Jupyter-(iPython)-notebook">
+        ¶
+       </a>
+      </h1>
+      <p>
+       This is a quick guide to getting started with installing Python and the Jupyter (formerly iPython) notebook interface.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="Mac-OS-and-Linux">
+       Mac OS and Linux
+       <a class="anchor-link" href="#Mac-OS-and-Linux">
+        ¶
+       </a>
+      </h3>
+      <p>
+       Although Python comes standard with OS X and Linux, not all the packages required might come with the OS. The packages we use are
+       <code>
+        numpy
+       </code>
+       (mathematical operations),
+       <code>
+        scipy
+       </code>
+       (a full scientific package of which
+       <code>
+        numpy
+       </code>
+       is a subset),
+       <code>
+        matplotlib
+       </code>
+       (graphical plotting) and
+       <code>
+        jupyter
+       </code>
+       (for the notebook interface).
+      </p>
+      <p>
+       The main installation options are to
+      </p>
+      <ul>
+       <li>
+        Install the packages individually using the Python package manager:
+        <code>
+         pip install scipy numpy matplotlib jupyter
+        </code>
+       </li>
+       <li>
+        On Linux-based systems it is probably best to use the system package manager,
+        <code>
+         apt-get
+        </code>
+        on Ubuntu-based systems or
+        <code>
+         yum
+        </code>
+        on Red Hat / Fedora based systems.
+        <a href="http://www.scipy.org/install.html">
+         Installation instructions for
+         <code>
+          scipy
+         </code>
+         ,
+         <code>
+          numpy
+         </code>
+         and
+         <code>
+          matplotlib
+         </code>
+         are available here.
+        </a>
+       </li>
+       <li>
+        Install a second Python distribution like Anaconda or Canopy that will sit side by side with the system's Python. This is probably the best solution for Mac OS users, since the installers are in a graphical user interface.
+       </li>
+      </ul>
+      <p>
+       To run the notebook, open a command line window and
+      </p>
+      <ul>
+       <li>
+        Change directory to a folder where you want to keep the notebooks with
+        <code>
+         cd (path)
+        </code>
+        . If you are using a desktop GUI and don't know the path you can usually drag and drop the folder into the command-line window to retrieve the path.
+       </li>
+       <li>
+        Launch the notebook with
+        <code>
+         ipython notebook
+        </code>
+        or
+        <code>
+         jupyter notebook
+        </code>
+        (either will work).
+       </li>
+      </ul>
+      <p>
+       The app runs a local web server and launches the notebook interface, which is by default at the address
+       <a href="http://localhost:8888">
+        http://localhost:8888
+       </a>
+       .
+      </p>
+      <h3 id="Windows">
+       Windows
+       <a class="anchor-link" href="#Windows">
+        ¶
+       </a>
+      </h3>
+      <p>
+       Python doesn't come standard with any version of Windows. Although the official Python website has an installer for Windows, we instead recommend installing the free
+       <a href="https://www.continuum.io/downloads">
+        Anaconda
+       </a>
+       or
+       <a href="https://www.enthought.com/products/canopy/">
+        Enthought Canopy
+       </a>
+       distributions for Python. These packages incorporate the scientific packages required for the course. The installation is in a graphical user interface and thus easy to use.
+      </p>
+      <p>
+       To run Jupyter notebook, search the Start menu for an app called Jupyter Notebook or iPython Notebook. The app runs a local web server and then launches a web browser window, which is by default at the address
+       <a href="http://localhost:8888">
+        http://localhost:8888
+       </a>
+       .
+      </p>
+      <h3 id="Official-documentation">
+       Official documentation
+       <a class="anchor-link" href="#Official-documentation">
+        ¶
+       </a>
+      </h3>
+      <p>
+       If you need more help or specific instructions, more information about
+       <a href="https://media.readthedocs.org/pdf/jupyter-notebook-beginner-guide/latest/jupyter-notebook-beginner-guide.pdf">
+        installing Jupyter is available here
+       </a>
+       .
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</html>

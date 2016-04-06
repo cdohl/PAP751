@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Google font -->
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic' rel='stylesheet' type='text/css'>
+    <!-- MathJax -->
+    <title>PyCFD: finite difference methods</title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+	 
+	 </head>
+
+  <style type="text/css">
+    body {font-family: Merriweather; font-size:1.6em;
+    line-height:1.7em;}
+    .navbar-inverse{background-color:#9D0B43; border:none;}
+    ul.nav.navbar-nav li a {color:#eed1cf;}
+    a.navbar-brand {color:white !important;}
+    .welcome {text-align:center; width:90%;}
+    div.container.welcome p {text-align:justify;}
+    div.jumbotron {background: #9D0B43;}
+    div.jumbotron div.container p {color: #eed1cf; }
+    div.jumbotron div.container {
+    width:50%; text-align: center;
+    color:white;
+    }
+    div.col-md-4 {text-align:center;}
+    div.col-md-4 h2 {font-style:italic;}
+  </style>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">PyCFD</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+	    <li><a href="Installing%2520Python%2520and%2520iPython%2520notebook.html">Get started</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+	<img src="./img/course_logo.png" style="max-width:300px; padding-top:30px;">
+        <h1>PyCFD</h1>
+        <p>A Pythonic introduction to numerical techniques
+        used in computational fluid dynamics. </p>
+        <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
+      </div>
+    </div>
+
+    <div class="container welcome">
+      <h1 style="text-align:center;">Welcome</h1>
+      <p>This course provides an introduction to various techniques
+      used in computational fluid dynamics for incompressible
+	viscous flow and ideal flow. Upon completion,
+      you will become acquainted with the inner workings of these basic
+	CFD techniques. The programs shown here are not
+	optimized for speed, but for clarity.</p>
+
+      <p>All parts of this course utilize the Python programming language. To get the
+      maximum benefit we recommend you to also use the
+      iPython/Jupyter notebook environment. To get started with Jupyter notebook,
+      it might be useful to <a href="./Installing%2520Python%2520and%2520iPython%2520notebook.html">consult the instructions here</a>. The strength of this
+      course is that all the algebra is covered directly with some
+      easy to read code. You can see one-to-one how a formula is coded
+      and the result of the program. You can download and open our
+	iPython notebooks to see how it works, or modify it to solve a
+	new problem.
+      </p>
+      
+    </div>
+
+    <hr>
+    
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+	  <img src="./img/fdm.png" height="200px"><br/>
+          <h2>Finite difference method</h2>
+          <p>The most accessible method to write and solve partial
+          differential equations in a computerized form. If you are
+          unacquainted with solving PDEs numerically, you should
+          start here. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+	  <img src="./img/fv.png" height="200px"><br/>	  
+          <h2>Volume of fluid method</h2>
+          <p>The Navier-Stokes equations are formulated on fluid volumes. Here we will introduce the modelling of multiple phases using simple advection and interface tracking. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+	  <img src="./img/bem.png" height="200px"><br/>	  	  
+          <h2>Boundary element method</h2>
+          <p>Unlike the other techniques, only the points on the boundary of
+          the domain are discretised. It is computationally
+          efficient but carries significant mathematical baggage!  </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+    <div class="container welcome">
+      <h2 style="text-align:center;">Course references</h2>
+      <p>We make heavy use of resources from our colleagues, in
+      particular the excellent starter course of Prof Lorena Barba
+      (<a href="http://lorenabarba.com">12 Steps
+      to Navier-Stokes</a>), the public chapters from Prof Whye Teong
+      Ang's <a href="http://www.ntu.edu.sg/home/mwtang/bem2011.html">excellent book on the
+      boundary element method</a>, and a great tutorial on finite
+	volumes and multiphase flows by Prof Gretar Tryggvason. 
+      </p>
+
+      
+    </div>
+      
+      
+      <hr>
+
+      <!-- <footer> -->
+      <!--   <p>&copy; 2015 Company, Inc.</p> -->
+      <!-- </footer> -->
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="./js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+
